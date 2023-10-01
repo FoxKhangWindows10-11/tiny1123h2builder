@@ -23,21 +23,21 @@ if not exist "%DriveLetter%\sources\install.wim" (
 	echo.Please enter the correct DVD Drive Letter..
 	goto :Stop
 )
-md c:\tiny11 23h2
+md c:\tiny1123h2
 echo Copying Windows image...
-xcopy.exe /E /I /H /R /Y /J %DriveLetter% c:\tiny11 >nul
+xcopy.exe /E /I /H /R /Y /J %DriveLetter% c:\tiny1123h2 >nul
 echo Copy complete!
 sleep 2
 cls
 echo Getting image information:
-dism /Get-WimInfo /wimfile:c:\tiny11 23h2\sources\install.wim
+dism /Get-WimInfo /wimfile:c:\tiny1123h2\sources\install.wim
 set index=
 set /p index=Please enter the image index:
 set "index=%index%"
 echo Mounting Windows image. This may take a while.
 echo.
 md c:\scratchdir
-dism /mount-image /imagefile:c:\tiny11\sources\install.wim /index:%index% /mountdir:c:\scratchdir
+dism /mount-image /imagefile:c:\tiny1123h2\sources\install.wim /index:%index% /mountdir:c:\scratchdir
 echo Mounting complete! Performing removal of applications...
 echo Removing Clipchamp...
 dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Clipchamp.Clipchamp_2.2.8.0_neutral_~_yxz26nhyzhsrt 
@@ -168,14 +168,14 @@ echo Cleanup complete.
 echo Unmounting image...
 dism /unmount-image /mountdir:c:\scratchdir /commit
 echo Exporting image...
-Dism /Export-Image /SourceImageFile:c:\tiny11\sources\install.wim /SourceIndex:%index% /DestinationImageFile:c:\tiny11\sources\install2.wim /compress:max
-del c:\tiny11\sources\install.wim
-ren c:\tiny11\sources\install2.wim install.wim
+Dism /Export-Image /SourceImageFile:c:\tiny1123h2\sources\install.wim /SourceIndex:%index% /DestinationImageFile:c:\tiny11\sources\install2.wim /compress:max
+del c:\tiny1123h2\sources\install.wim
+ren c:\tiny1123h2\sources\install2.wim install.wim
 echo Windows image completed. Continuing with boot.wim.
 timeout /t 2 /nobreak > nul
 cls
 echo Mounting boot image:
-dism /mount-image /imagefile:c:\tiny11\sources\boot.wim /index:2 /mountdir:c:\scratchdir
+dism /mount-image /imagefile:c:\tiny1123h2\sources\boot.wim /index:2 /mountdir:c:\scratchdir
 echo Loading registry...
 reg load HKLM\zCOMPONENTS "c:\scratchdir\Windows\System32\config\COMPONENTS" >nul
 reg load HKLM\zDEFAULT "c:\scratchdir\Windows\System32\config\default" >nul
@@ -205,16 +205,16 @@ reg unload HKLM\zSYSTEM >nul 2>&1
 echo Unmounting image...
 dism /unmount-image /mountdir:c:\scratchdir /commit 
 cls
-echo the tiny11 image is now completed. Proceeding with the making of the ISO...
+echo the tiny11 23h2 image is now completed. Proceeding with the making of the ISO...
 echo Copying unattended file for bypassing MS account on OOBE...
-copy /y %~dp0autounattend.xml c:\tiny11\autounattend.xml
+copy /y %~dp0autounattend.xml c:\tiny1123h2\autounattend.xml
 echo.
 echo Creating ISO image...
-%~dp0oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bc:\tiny11\boot\etfsboot.com#pEF,e,bc:\tiny11\efi\microsoft\boot\efisys.bin c:\tiny11 %~dp0tiny11.iso
+%~dp0oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bc:\tiny1123h2\boot\etfsboot.com#pEF,e,bc:\tiny1123h2\efi\microsoft\boot\efisys.bin c:\tiny1123h2 %~dp0tiny11 23h2.iso
 echo Creation completed! Press any key to exit the script...
 pause 
 echo Performing Cleanup...
-rd c:\tiny11 /s /q 
+rd c:\tiny1123h2 /s /q 
 rd c:\scratchdir /s /q 
 exit
 
