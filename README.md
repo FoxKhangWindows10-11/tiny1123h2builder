@@ -51,6 +51,7 @@ Known issues:
 
 1. The script is rather inflexible, as in only the builds specified can be modified. This is because with each new build Microsoft also updates the inbox apps included. If one tries to use other builds, it will work with varying degrees of success, but some things like the removal of Edge and OneDrive as well as bypassing system requirements or other patches will always be applied.
 2. Only en-us x64 is supported as of now. This can be easily fixable by the end user, just by replacing every instance of en-us with the language needed (like ro-RO and so on), and every x64 instance with arm64.
+3. This builder it still have few UWP apps, so you have to use NTLite to remove the UWP apps same this part What is removed on README.md
 
 And that's pretty much it for now!
 Thanks for trying it and let me know how you like it!
