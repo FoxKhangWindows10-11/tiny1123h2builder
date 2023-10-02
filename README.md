@@ -23,7 +23,7 @@ Clipchamp,
 News,
 Weather,
 GetHelp,
-GetStarted (Tips)
+GetStarted (Tips),
 Office Hub,
 Solitaire,
 PeopleApp,
