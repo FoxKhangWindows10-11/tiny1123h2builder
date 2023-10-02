@@ -71,8 +71,6 @@ echo Removing Sound Recorder...
 dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2021.2208.27.0_neutral_~_8wekyb3d8bbwe
 echo Removing Your Phone...
 dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.YourPhone_1.22022.147.0_neutral_~_8wekyb3d8bbwe
-echo Removing Music...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneMusic_11.2210.33.0_neutral_~_8wekyb3d8bbwe
 echo Removing Video...
 dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneVideo_2019.22120.10031.0_neutral_~_8wekyb3d8bbwe
 echo Removing Family...
@@ -109,9 +107,6 @@ dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-TabletP
 echo Removing Wallpapers:
 dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-Wallpaper-Content-Extended-FoD-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 
-echo Removing Edge:
-rd "C:\scratchdir\Program Files (x86)\Microsoft\Edge" /s /q
-rd "C:\scratchdir\Program Files (x86)\Microsoft\EdgeUpdate" /s /q
 echo Removing OneDrive:
 takeown /f C:\scratchdir\Windows\System32\OneDriveSetup.exe
 icacls C:\scratchdir\Windows\System32\OneDriveSetup.exe /grant Administrators:F /T /C
