@@ -104,8 +104,6 @@ dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPl
 dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~wow64~~10.0.22631.2361 > nul
 echo Removing Tablet PC Math:
 dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-TabletPCMath-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
-echo Removing Wallpapers:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-Wallpaper-Content-Extended-FoD-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 
 echo Removing OneDrive:
 takeown /f C:\scratchdir\Windows\System32\OneDriveSetup.exe
