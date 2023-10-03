@@ -44,7 +44,7 @@ TTS for en-us,
 Media Player Legacy,
 Tablet PC Math,
 OneDrive,
-Camera,
+WindowsCamera,
 Microsoft Teams
 
 Known issues:
