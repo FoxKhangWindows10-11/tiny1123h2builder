@@ -36,90 +36,90 @@ set /p index=Please enter the image index:
 set "index=%index%"
 echo Mounting Windows image. This may take a while.
 echo.
-md c:\scratchdir
+md c:\windowslocaldisk
 dism /mount-image /imagefile:c:\tiny1123h2\sources\install.wim /index:%index% /mountdir:c:\scratchdir
 echo Mounting complete! Performing removal of applications...
 echo Removing Clipchamp...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Clipchamp.Clipchamp_2.5.15.0_neutral_~_yxz26nhyzhsrt
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Clipchamp.Clipchamp_2.5.15.0_neutral_~_yxz26nhyzhsrt
 echo Removing News...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingNews_4.12.21001.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingNews_4.12.21001.0_neutral_~_8wekyb3d8bbwe
 echo Removing Weather...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_4.53.50023.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_4.53.50023.0_neutral_~_8wekyb3d8bbwe
 echo Removing GetHelp...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GetHelp_10.2206.2011.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GetHelp_10.2206.2011.0_neutral_~_8wekyb3d8bbwe
 echo Removing GetStarted...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Getstarted_2021.2204.1.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Getstarted_2021.2204.1.0_neutral_~_8wekyb3d8bbwe
 echo Removing Office Hub...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftOfficeHub_18.2204.1141.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftOfficeHub_18.2204.1141.0_neutral_~_8wekyb3d8bbwe
 echo Removing Solitaire...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftSolitaireCollection_4.12.3171.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftSolitaireCollection_4.12.3171.0_neutral_~_8wekyb3d8bbwe
 echo Removing PeopleApp...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.People_2020.901.1724.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.People_2020.901.1724.0_neutral_~_8wekyb3d8bbwe
 echo Removing PowerAutomate...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.PowerAutomateDesktop_10.0.3735.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.PowerAutomateDesktop_10.0.3735.0_neutral_~_8wekyb3d8bbwe
 echo Removing ToDo...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Todos_2.54.42772.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Todos_2.54.42772.0_neutral_~_8wekyb3d8bbwe
 echo Removing Alarms...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsAlarms_2022.2210.9.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsAlarms_2022.2210.9.0_neutral_~_8wekyb3d8bbwe
 echo Removing Mail...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:microsoft.windowscommunicationsapps_16005.14326.20544.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:microsoft.windowscommunicationsapps_16005.14326.20544.0_neutral_~_8wekyb3d8bbwe
 echo Removing Feedback Hub...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsFeedbackHub_2022.106.2230.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsFeedbackHub_2022.106.2230.0_neutral_~_8wekyb3d8bbwe
 echo Removing Maps...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsMaps_2022.2208.6.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsMaps_2022.2208.6.0_neutral_~_8wekyb3d8bbwe
 echo Removing Sound Recorder...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2021.2208.27.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2021.2208.27.0_neutral_~_8wekyb3d8bbwe
 echo Removing Your Phone...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.YourPhone_1.22022.147.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.YourPhone_1.22022.147.0_neutral_~_8wekyb3d8bbwe
 echo Removing Video...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneVideo_2019.22120.10031.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.ZuneVideo_2019.22120.10031.0_neutral_~_8wekyb3d8bbwe
 echo Removing Family...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:MicrosoftCorporationII.MicrosoftFamily_2022.507.447.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:MicrosoftCorporationII.MicrosoftFamily_2022.507.447.0_neutral_~_8wekyb3d8bbwe
 echo Removing QuickAssist...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:MicrosoftCorporationII.QuickAssist_2022.825.2016.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:MicrosoftCorporationII.QuickAssist_2022.825.2016.0_neutral_~_8wekyb3d8bbwe
 echo Removing Teams...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:MicrosoftTeams_23002.403.1788.1930_x64__8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:MicrosoftTeams_23002.403.1788.1930_x64__8wekyb3d8bbwe
 echo Removing Cortana...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.549981C3F5F10_4.2204.13303.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.549981C3F5F10_4.2204.13303.0_neutral_~_8wekyb3d8bbwe
 echo Removing WindowsCamera...
-dism /image:c:\scratchdir /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCamera_2022.2201.4.0_neutral_~_8wekyb3d8bbwe
+dism /image:c:\windowslocaldisk /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCamera_2022.2201.4.0_neutral_~_8wekyb3d8bbwe
 
 echo Removing of system apps complete! Now proceeding to removal of system packages...
 timeout /t 1 /nobreak > nul
 cls
 echo Removing Internet Explorer...
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~en-US~11.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~en-US~11.0.22631.2361 > nul
 echo Removing LA57:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-Kernel-LA57-FoD-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-Kernel-LA57-FoD-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 echo Removing Handwriting:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Handwriting-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Handwriting-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 echo Removing OCR:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-OCR-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-OCR-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 echo Removing Speech:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 echo Removing TTS:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 echo Removing Media Player Legacy:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~wow64~en-US~10.0.22631.2361 > nul
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~wow64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~wow64~en-US~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~wow64~~10.0.22631.2361 > nul
 echo Removing Tablet PC Math:
-dism /image:c:\scratchdir /Remove-Package /PackageName:Microsoft-Windows-TabletPCMath-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
+dism /image:c:\windowslocaldisk /Remove-Package /PackageName:Microsoft-Windows-TabletPCMath-Package~31bf3856ad364e35~amd64~~10.0.22631.2361 > nul
 
 echo Removing OneDrive:
-takeown /f C:\scratchdir\Windows\System32\OneDriveSetup.exe
-icacls C:\scratchdir\Windows\System32\OneDriveSetup.exe /grant Administrators:F /T /C
-del /f /q /s "C:\scratchdir\Windows\System32\OneDriveSetup.exe"
+takeown /f C:\windowslocaldisk\Windows\System32\OneDriveSetup.exe
+icacls C:\windowslocaldisk\Windows\System32\OneDriveSetup.exe /grant Administrators:F /T /C
+del /f /q /s "C:\windowslocaldisk\Windows\System32\OneDriveSetup.exe"
 echo Removal complete!
 timeout /t 2 /nobreak > nul
 cls
 echo Loading registry...
-reg load HKLM\zCOMPONENTS "c:\scratchdir\Windows\System32\config\COMPONENTS" >nul
-reg load HKLM\zDEFAULT "c:\scratchdir\Windows\System32\config\default" >nul
-reg load HKLM\zNTUSER "c:\scratchdir\Users\Default\ntuser.dat" >nul
-reg load HKLM\zSOFTWARE "c:\scratchdir\Windows\System32\config\SOFTWARE" >nul
-reg load HKLM\zSYSTEM "c:\scratchdir\Windows\System32\config\SYSTEM" >nul
+reg load HKLM\zCOMPONENTS "c:\windowslocaldisk\Windows\System32\config\COMPONENTS" >nul
+reg load HKLM\zDEFAULT "c:\windowslocaldisk\Windows\System32\config\default" >nul
+reg load HKLM\zNTUSER "c:\windowslocaldisk\Users\Default\ntuser.dat" >nul
+reg load HKLM\zSOFTWARE "c:\windowslocaldisk\Windows\System32\config\SOFTWARE" >nul
+reg load HKLM\zSYSTEM "c:\windowslocaldisk\Windows\System32\config\SYSTEM" >nul
 echo Bypassing system requirements(on the system image):
 			Reg add "HKLM\zDEFAULT\Control Panel\UnsupportedHardwareNotificationCache" /v "SV1" /t REG_DWORD /d "0" /f >nul 2>&1
 			Reg add "HKLM\zDEFAULT\Control Panel\UnsupportedHardwareNotificationCache" /v "SV2" /t REG_DWORD /d "0" /f >nul 2>&1
@@ -157,12 +157,12 @@ reg unload HKLM\zSCHEMA >nul 2>&1
 reg unload HKLM\zSOFTWARE >nul 2>&1
 reg unload HKLM\zSYSTEM >nul 2>&1
 echo Cleaning up image...
-dism /image:c:\scratchdir /Cleanup-Image /StartComponentCleanup /ResetBase
+dism /image:c:\windowslocaldisk /Cleanup-Image /StartComponentCleanup /ResetBase
 echo Cleanup complete.
 echo Unmounting image...
-dism /unmount-image /mountdir:c:\scratchdir /commit
+dism /unmount-image /mountdir:c:\windowslocaldisk /commit
 echo Exporting image...
-Dism /Export-Image /SourceImageFile:c:\tiny1123h2\sources\install.wim /SourceIndex:%index% /DestinationImageFile:c:\tiny11\sources\install2.wim /compress:max
+Dism /Export-Image /SourceImageFile:c:\tiny1123h2\sources\install.wim /SourceIndex:%index% /DestinationImageFile:c:\tiny1123h2\sources\install2.wim /compress:max
 del c:\tiny1123h2\sources\install.wim
 ren c:\tiny1123h2\sources\install2.wim install.wim
 echo Windows image completed. Continuing with boot.wim.
@@ -171,11 +171,11 @@ cls
 echo Mounting boot image:
 dism /mount-image /imagefile:c:\tiny1123h2\sources\boot.wim /index:2 /mountdir:c:\scratchdir
 echo Loading registry...
-reg load HKLM\zCOMPONENTS "c:\scratchdir\Windows\System32\config\COMPONENTS" >nul
-reg load HKLM\zDEFAULT "c:\scratchdir\Windows\System32\config\default" >nul
-reg load HKLM\zNTUSER "c:\scratchdir\Users\Default\ntuser.dat" >nul
-reg load HKLM\zSOFTWARE "c:\scratchdir\Windows\System32\config\SOFTWARE" >nul
-reg load HKLM\zSYSTEM "c:\scratchdir\Windows\System32\config\SYSTEM" >nul
+reg load HKLM\zCOMPONENTS "c:\windowslocaldisk\Windows\System32\config\COMPONENTS" >nul
+reg load HKLM\zDEFAULT "c:\windowslocaldisk\Windows\System32\config\default" >nul
+reg load HKLM\zNTUSER "c:\windowslocaldisk\Users\Default\ntuser.dat" >nul
+reg load HKLM\zSOFTWARE "c:\windowslocaldisk\Windows\System32\config\SOFTWARE" >nul
+reg load HKLM\zSYSTEM "c:\windowslocaldisk\Windows\System32\config\SYSTEM" >nul
 echo Bypassing system requirements(on the setup image):
 			Reg add "HKLM\zDEFAULT\Control Panel\UnsupportedHardwareNotificationCache" /v "SV1" /t REG_DWORD /d "0" /f >nul 2>&1
 			Reg add "HKLM\zDEFAULT\Control Panel\UnsupportedHardwareNotificationCache" /v "SV2" /t REG_DWORD /d "0" /f >nul 2>&1
@@ -197,7 +197,7 @@ reg unload HKLM\zSCHEMA >nul 2>&1
 reg unload HKLM\zSOFTWARE >nul 2>&1
 reg unload HKLM\zSYSTEM >nul 2>&1
 echo Unmounting image...
-dism /unmount-image /mountdir:c:\scratchdir /commit 
+dism /unmount-image /mountdir:c:\windowslocaldisk /commit 
 cls
 echo the tiny11 23h2 image is now completed. Proceeding with the making of the ISO...
 echo Copying unattended file for bypassing MS account on OOBE...
@@ -209,7 +209,7 @@ echo Creation completed! Press any key to exit the script...
 pause 
 echo Performing Cleanup...
 rd c:\tiny1123h2 /s /q 
-rd c:\scratchdir /s /q 
+rd c:\windowslocaldisk /s /q 
 exit
 
 
